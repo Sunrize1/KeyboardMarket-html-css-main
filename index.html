@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html id="all" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,
+    maximum-scale=1.0, user-scalable=no"" />
+    <title>KeyboardMaster</title>
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&family=Roboto:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="js/index.js" defer></script>
+  </head>
+  <body>
+    <header id="header">
+      <div class="logo">
+        <img src="assets/logo.jpg" alt="logo" />
+        <h1>KeyboardMaster</h1>
+      </div>
+
+      <nav class="navigation">
+        <ul class="nav-bar">
+          <li><a href="">Главная</a></li>
+          <li><a href="">Каталог</a></li>
+          <li>
+            <form action="#">
+              <input class="mainInput" type="text" placeholder="Найти" />
+              <button class="btn search" type="submit">Найти</button>
+            </form>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="profile">
+        <img src="assets/profile.ico" alt="profile" id="profileLogo" />
+        <ul class="profile-settings profile-settingsOff">
+          <li>Личный кабинет</li>
+          <li id="basket">Корзина</li>
+          <li>Выход</li>
+        </ul>
+      </div>
+      <span class="burger" id="brg"></span>
+    </header>
+    <main>
+      <div class="container">
+        <section class="settings">
+          <form action="#">
+            <div class="settings_blocks">
+              <div class="col-1">
+                <h5>Производитель</h5>
+                <div class="form-check">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="checkbox" />
+                    <span class="check-box"></span>
+                    Leopold
+                  </label>
+                </div>
+                <div class="form-check">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="checkbox" />
+                    <span class="check-box"></span>
+                    Varmilo</label
+                  >
+                </div>
+                <div class="form-check">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="checkbox" />
+                    <span class="check-box"></span>
+                    Ducky
+                  </label>
+                </div>
+              </div>
+              <!--block2-->
+              <div class="col-2">
+                <h5>Размер</h5>
+                <div class="form-check">
+                  <label class="form-check-label">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="switch"
+                    />
+                    <span class="radio-btn"></span>
+                    100%
+                  </label>
+                </div>
+                <div class="form-check">
+                  <label class="form-check-label">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="switch"
+                    />
+                    <span class="radio-btn"></span>
+                    80%
+                  </label>
+                </div>
+                <div class="form-check">
+                  <label class="form-check-label">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="switch"
+                    />
+                    <span class="radio-btn"></span>
+                    65%
+                  </label>
+                </div>
+                <div class="form-check">
+                  <label class="form-check-label">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="switch"
+                    />
+                    <span class="radio-btn"></span>
+                    20%
+                  </label>
+                </div>
+              </div>
+              <!--block3-->
+              <div class="col-3">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    role="switch"
+                    id="rating"
+                  />
+                  <label class="form-check-label" for="rating"
+                    >Высокий рейтинг</label
+                  >
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    role="switch"
+                    id="discount"
+                  />
+                  <label class="form-check-label" for="discount"
+                    >Товары со скидкой</label
+                  >
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    role="switch"
+                    id="inSale"
+                  />
+                  <label class="form-check-label" for="inSale"
+                    >Есть в продаже</label
+                  >
+                </div>
+              </div>
+              <div class="col-4">
+                <button class="btn" type="submit">Применить</button>
+              </div>
+            </div>
+          </form>
+        </section>
+        <section class="cards">
+          <div class="card">
+            <div class="card-image">
+              <img  src="assets/keyboards/ducky1.jpg" alt="keyboard" />
+            </div>
+            <div class="card-header">
+              <h3>Ducky One 3 TKL Yellow</h3>
+            </div>
+            <div class="card-text">
+              <p>
+                Клавиатура порадует обновленным корпусом, возможностью менять
+                переключатели без паяльника, пятью слоями для настройки,
+                стоковой виброизоляцией и это — не конец.
+              </p>
+            </div>
+            <div class="card-button">
+              <button class="btn buy-btn">В корзину</button>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-image">
+              <img src="assets/keyboards/ducky2.jpg" alt="keyboard" />
+            </div>
+            <div class="card-header">
+              <h3>Ducky One 2 Mini RGB</h3>
+            </div>
+            <div class="card-text">
+              <p>
+                Ducky — производитель, делающий продукцию в первую очередь для
+                геймеров. Необычный дизайн, хорошее качество сборки, PBT
+                double-shot кейкапы, и многое другое
+              </p>
+            </div>
+            <div class="card-button">
+              <button class="btn buy-btn">В корзину</button>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-image">
+              <img src="assets/keyboards/varmilo1.jpg" alt="keyboard" />
+            </div>
+            <div class="card-header">
+              <h3>Varmilo Sword 2 Beijing Opera VSM68</h3>
+            </div>
+            <div class="card-text">
+              <p>
+                Sword 2 — это как стандартная клавиатура Varmilo, круче. потому
+                что в алюминиевом корпусе. Тяжелая, приятная на ощупь и выглядит
+                безупречно.
+              </p>
+            </div>
+            <div class="card-button">
+              <button class="btn buy-btn">В корзину</button>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-image">
+              <img src="assets/keyboards/varmilo2.jpg" alt="keyboard" />
+            </div>
+            <div class="card-header">
+              <h3>Varmilo Vintage Days CMYK V2 108</h3>
+            </div>
+            <div class="card-text">
+              <p>
+                Сдержанный дизайн Vintage days навеивает воспоминания об ЭВМ.
+                Почувствуйте себя работником НИИ в секретной лаборатории..
+              </p>
+            </div>
+            <div class="card-button">
+              <button class="btn buy-btn">В корзину</button>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-image">
+              <img src="assets/keyboards/leopold1.jpg" alt="keyboard" />
+            </div>
+            <div class="card-header">
+              <h3>Leopold FC750R BT Gray</h3>
+            </div>
+            <div class="card-text">
+              <p>
+                Leopold FC750R BT Gray — беспроводная клавиатура 80% формата с
+                низкопрофильными double-shot PBT кейкапами и заводской
+                шумоизоляцией.
+              </p>
+            </div>
+            <div class="card-button">
+              <button class="btn buy-btn">В корзину</button>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-image">
+              <img src="assets/keyboards/leopold2.jpg" alt="keyboard" />
+            </div>
+            <div class="card-header">
+              <h3>Leopold FC900R PD Gray Purple</h3>
+            </div>
+            <div class="card-text">
+              <p>
+                Данная модель выполнена в сочетании пурпурно-фиолетового, серого
+                и чёрного цветов, расцветка обязательно понравится любителям
+                сочных, но приглушённых красок.
+              </p>
+            </div>
+            <div class="card-button">
+              <button class="btn buy-btn">В корзину</button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer>
+      <p>
+        <a href="index.html">keyboardMaster</a>
+      </p>
+    </footer>
+
+    <div id="popup" class="popupDisable">
+      <div class="popupMain">
+        <span class="close">&times</span>
+        <div class="selectedCards">
+          <div class="basketHeader">
+            <h2>Корзина</h2>
+          </div>
+          <div class="basket">
+            
+          </div>
+        </div>
+        <div class="total">
+          <div class="totalBlock1">
+            <h2>Итого</h2>
+            <ol class="itemList"></ol>
+          </div>
+          <div class="totalBlock2">
+            <h4>Сумма:</h4>
+            <button class="btn">Купить</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>

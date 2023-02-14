@@ -1,0 +1,463 @@
+
+$bg-color:#CAD2C5;
+$main-color:#84A98C;
+$main-dark:#2F3E46;
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+body {
+    background-color: $bg-color;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+h1, h2, h3, h4, h5, p {
+    margin: 0;
+    padding: 0;
+}
+
+.btn {
+    border: none;
+    background-color: $main-dark;
+    color: white;
+    height: 40px;
+    width: 80px;
+    border-radius: 10px;
+    margin: 0px 5px;
+    box-shadow: inset 0 0 5px rgba(0,0,0,.2);
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn:hover {
+    background-color: #3c4e58;
+}
+
+.btn:active {
+    scale: .95;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    background-color: $main-color;
+    height: 110px;
+    width: 100%;
+    .logo{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        cursor: pointer;
+        h1 {
+            font-weight: 300;
+            font-size: 25px;
+        }
+        img {
+            width: 80px;
+        }
+    }
+
+    .navigation {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-grow: 3;
+        .nav-bar {
+            display: flex;
+            flex-direction: row;
+            list-style-type: none;
+            align-items: center;
+            gap: 20px;
+            font-weight: 300;
+            cursor: pointer;
+            input {
+                height: 20px;
+                width: 400px;
+                border: none;
+                border-radius: 10px;
+                padding: 10px;
+            }
+        }
+    }
+
+    .profile {
+        display: flex;
+        align-items: center;
+        position: relative;
+        cursor: pointer;
+        .profile-settings {
+            position: absolute;
+            list-style-type: none;
+            right: 70px;
+            top: 0px;
+            z-index: 10;
+            background-color: #CAD2C5;
+            padding: 5px 15px;
+            width: 140px;
+            border-radius: 10px;
+            border: 1px solid $main-dark;
+            li {
+                margin-top: 7px;
+                padding: 4px;
+                cursor: pointer;
+            }
+            li:hover {
+                background-color: #cfcfcf;
+                outline: 1px solid $main-dark;
+                border-radius: 5px;
+            }
+        }
+        .profile-settingsOff {
+            display: none;
+        }
+        img {
+            width: 40px;
+            margin: 0px 10px;
+        }
+    }
+
+}
+
+main {
+    display: flex;
+    justify-content: center;
+
+    .container {
+        padding: 20px 40px;
+        display: flex;
+        max-width: 1200px;
+        width: 100%;
+    }
+
+    .settings_blocks{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 250px;
+        height: 100%;
+
+        h5{
+            margin: 10px 0px;
+        }
+
+        .col-1{
+            .form-check-input {
+                appearance: none;
+                position: absolute;
+            }
+            .check-box {
+                position: absolute;
+                width: 20px;
+                height: 20px;
+                margin-left: -24px;
+                background-image: url("../assets/checkbox/check.svg");
+            }
+            .form-check-label {
+                padding-left: 24px;
+            }
+            .form-check-input:checked + .check-box {
+                background-image: url("../assets/checkbox/checkActive.svg");
+                width: 24px;
+                height: 24px;
+            }
+        }
+
+        .col-2 {
+            .form-check-input {
+                appearance: none;
+                position: absolute;
+            }
+            .radio-btn {
+                position: absolute;
+                width: 20px;
+                height: 20px;
+                margin-left: -24px;
+                background-image: url("../assets/radio/radio.svg");
+            }
+            .form-check-label {
+                padding-left: 24px;
+            }
+            .form-check-input:checked + .radio-btn {
+                background-image: url("../assets/radio/radioActive.svg");
+                width: 24px;
+                height: 24px;
+            }
+        }
+
+        .col-3 {
+            .form-check-input {
+                position: relative;
+                width: 40px;
+                height: 20px;
+                appearance: none;
+                outline: none;
+                background-color: #c6c6c6;
+                border-radius: 20px;
+                top: 7px;
+                transition: .5s;
+                box-shadow: inset 0 0 5px rgba(0,0,0,.2);
+            }
+            .form-check-input:checked {
+                background-color: $main-color;
+            }
+            .form-check-input:before {
+                content: '';
+                position: absolute;
+                width: 20px;
+                height: 20px;
+                border-radius: 20px;
+                top: 0;
+                left: 0;
+                background-color: #fff;
+                transition: .5s;
+                transform: scale(1.1);
+                box-shadow: 0 2px 5px rgba(0,0,0,.2);
+            }
+            .form-check-input:checked::before {
+                left: 20px;
+            }
+        }
+    }
+
+    .cards {
+        display: flex;
+        gap: 40px;
+        flex-wrap: wrap;
+
+        .card {
+            width: 280px;
+            height: 420px;
+            border: solid 2px $main-dark;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background-color: $main-color;
+
+            .card-image {
+                img {
+                    object-fit: contain;
+                    width: 100%;
+                    border-top-left-radius: 10px;
+                    border-top-right-radius: 10px;
+                }
+            }
+            
+            .card-header {
+                padding: 0px 15px;
+            }
+
+            .card-text {
+                padding: 5px 15px;
+            }
+
+            .card-button {
+                margin: 10px 5px; 
+            }
+        }
+    }
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    background-color: $main-dark;
+
+        a {
+            color: #fff;
+        }
+}
+
+.hide {
+    opacity: 0;
+    pointer-events: none
+}
+
+.popupDisable{
+    display: none;
+}
+
+.popupEnable{
+    overflow: hidden;
+}
+
+.popup {
+    width: 100%;
+    min-height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(black, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .popupMain {
+        background-color: $bg-color;
+        position: relative;
+        width: 1400px;
+        min-height: 600px;
+        border-radius: 20px;
+        display: flex;
+        .close{
+            position: absolute;
+            top: 0px;
+            right: 10px;
+            font-size: 50px;
+            cursor: pointer;
+        }
+        .selectedCards{
+            flex-grow: 3;
+            .basketHeader{
+                text-align: center;
+                margin-top: 10px;
+                font-size: 17px;
+            }
+            .basket{
+                display: flex;
+                padding: 10px;
+                flex-wrap: wrap;
+                gap: 20px;
+                img{
+                    width: 320px;
+                    border-radius: 10px;
+                    border: 5px solid $main-color;
+                    cursor: pointer;
+                }
+                img:hover {
+                    border: 5px solid $main-dark;
+                }
+            }
+        }
+        .total {
+            background-color: $main-color;
+            flex-grow: 1;
+            min-width: 300px;
+            display: flex;
+            flex-direction: column;
+            .totalBlock1{
+                flex-grow: 5;
+                h2{
+                    text-align: center;
+                    margin-top: 10px;
+                }
+                li{
+                    padding: 10px;
+                }
+            }
+            .totalBlock2{
+                flex-grow: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                h4{
+                    margin-left: 45px;
+                }
+                .btn{
+                    margin: 15px;
+                    align-self: center;
+                    width: 80%;
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 1060px) {
+    .navigation {
+        opacity: 0;
+    }
+
+    .profile {
+        opacity: 0;
+    }
+
+    .burger {
+        background-image: url(../assets/burger.svg);
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        left: 94%;
+        top: 24px;
+        cursor: pointer;
+    }
+
+    .brgOn {
+        height: 100%;
+        flex-direction: column;
+
+        .nav-bar {
+            flex-direction: column;
+            width: 100px;
+            flex-wrap: wrap;
+            margin: 0;
+            padding: 12px;           
+
+            form {
+                display: flex;
+                flex-direction: column;
+                    .btn {
+                        margin: 10px 0px;
+                        align-self: flex-start;  
+                    }
+            }
+        }
+
+        .profile {
+            opacity: 100;
+        }
+
+        .navigation {
+            opacity: 100;
+        }
+    }
+
+    .profile-settings {
+        left: 60px;
+    }
+}
+
+@media (max-width: 965px) {
+    .container {
+        flex-wrap: wrap;
+        gap: 40px;
+        
+        .settings {
+            width: 100%;
+            justify-content: center;
+        }
+
+        .settings_blocks {
+            flex-direction: row;
+            width: 100%;
+            justify-content: center;
+        }
+
+        .cards {
+            justify-content: center;
+        }
+    }
+    
+}
+
+@media (max-width: 690px) {
+    .card {
+        min-width: 500px;
+        min-height: 500px;
+    }
+}
+
+@media (max-width: 520px) {
+    .card {
+        min-width: 100%;
+    }
+}
